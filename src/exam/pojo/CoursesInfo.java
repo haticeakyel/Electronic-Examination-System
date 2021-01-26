@@ -3,12 +3,21 @@ package exam.pojo;
 public class CoursesInfo {
 
 
-private String coursesCode;
+    private String coursesCode;
     private String coursesName;
     private String credit;
     private String courseslecturer;
     private String coursesnumberofstudents;
     private String coursesAvg;
+
+    public CoursesInfo(String coursesCode, String coursesName, String credit, String courseslecturer, String coursesnumberofstudents, String coursesAvg){
+        this.coursesCode=coursesCode;
+        this.coursesName=coursesName;
+        this.credit=credit;
+        this.courseslecturer=courseslecturer;
+        this.coursesnumberofstudents=coursesnumberofstudents;
+        this.coursesAvg=coursesAvg;
+    }
 
     public String getCoursesCode() {
     return coursesCode;

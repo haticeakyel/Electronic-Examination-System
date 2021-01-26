@@ -10,6 +10,8 @@ public abstract class LessonInfo {
 	    private String FinalPercent;
 	    private String TotalResult;
 	    private String Degree;
+
+	    
 	
 
 	
