@@ -12,16 +12,6 @@ public class CalculateInfo  {
 	    private String calTotalResult;
 	    private String calDegree;
 
-	    public CalculateInfo(String calStudentName,String calSchoolNumber, String calVisaResult, String calVisaPercent, String calFinalResult, String calFinalPercent, String calTotalResult, String calDegree){
-	    	this.calDegree = calDegree;
-	    	this.calFinalPercent = calFinalPercent;
-	    	this.calFinalResult= calFinalResult;
-	    	this.calSchoolNumber = calSchoolNumber;
-	    	this.calDegree = calDegree;
-	    	this.calTotalResult = calTotalResult;
-	    	this.calVisaPercent = calVisaPercent;
-	    	this.calVisaResult = calVisaResult;
-		}
 
 	    public String getCalStudentName() {
 	    	return calStudentName;

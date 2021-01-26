@@ -1,9 +1,13 @@
 package exam.pojo;
 
-public class Student{
+public class User {
     private String username;
     private String password;
     private boolean isActive;
+    public User(String username, String password){
+        this.username = username;
+        this.password = password;
+    }
 
     public String getUsername() {
         return username;
@@ -28,5 +32,4 @@ public class Student{
     public void setActive(boolean active) {
         isActive = active;
     }
-
 }

@@ -4,10 +4,7 @@ public class CalculusAnswerKey {
 	private String calstylish;
 	private String calanswer;
 
-	public CalculusAnswerKey(String calstylish, String calanswer){
-		this.calanswer= calanswer;
-		this.calstylish = calstylish;
-	}
+
 
 
 	

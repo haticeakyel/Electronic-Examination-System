@@ -11,7 +11,7 @@ public abstract class LessonInfo {
 	    private String TotalResult;
 	    private String Degree;
 
-	    
+
 	
 
 	
