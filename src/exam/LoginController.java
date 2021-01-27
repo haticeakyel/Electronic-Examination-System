@@ -47,17 +47,20 @@ public class LoginController implements IFxml{
 	private EventObject actionEvent;
 
 	private EventObject event;
-	
-	  @FXML
+
+
+
+
+
+    @FXML
 		public void exitStudentLoginBtn(ActionEvent event) throws IOException {
-	    	
-		
-	    	/*Parent mainexamParent = FXMLLoader.load(getClass().getResource("mainexam.fxml"));
-	        Scene scene = new Scene(mainexamParent);
-	        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-	        stage.setScene(scene);
-	        stage.show();*/
-	    }
+        Parent mainexamParent = FXMLLoader.load(getClass().getResource("mainexam.fxml"));
+        Scene scene = new Scene(mainexamParent);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+    }
     
     @FXML
     public void login(ActionEvent actionEvent) throws IOException {
@@ -113,25 +116,24 @@ public class LoginController implements IFxml{
         }
         
     }
-
-	@Override
-	public void stageShow() {
-		Parent mainexamParent = null;
-		try {
-			mainexamParent = FXMLLoader.load(getClass().getResource("mainexam.fxml"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    @Override
+    public void stageShow() {
+        Parent mainexamParent = null;
+        try {
+            mainexamParent = FXMLLoader.load(getClass().getResource("mainexam.fxml"));
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         Scene scene = new Scene(mainexamParent);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
-        stage.show(); 
-		
-	}
-                      
-     
-           
-                
-          
+        stage.show();
+
+    }
+
+
+
+
+
     }
