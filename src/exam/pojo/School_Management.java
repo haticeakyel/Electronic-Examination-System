@@ -1,12 +1,16 @@
 package exam.pojo;
 
-public class School_Management {
+public class School_Management extends User{
 
-	private String username;
-	private String password;
+	//private String username;
+	//private String password;
 	private boolean isActive;
 
-	public String getUsername() {
+	public School_Management(String username, String password) {
+		super(username, password);
+	}
+
+	/*public String getUsername() {
 		return username;
 	}
 
@@ -21,7 +25,7 @@ public class School_Management {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+*/
 	public boolean isActive() {
 		return isActive;
 	}

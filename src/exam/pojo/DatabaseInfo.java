@@ -1,7 +1,5 @@
 package exam.pojo;
 
-import exam.LessonInfo;
-
 public class DatabaseInfo {
 
 

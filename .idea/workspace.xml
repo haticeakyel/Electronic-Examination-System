@@ -2,25 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exam/pojo/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/SchoolManagementLoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/SchoolManagementMenuController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/SchoolManagementMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/StudentMenuController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/StudentMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/pojo/CalculateInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/pojo/CalculateInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/pojo/CalculusAnswerKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/pojo/CalculusAnswerKey.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/pojo/CoursesInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/pojo/CoursesInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/pojo/DatabaseInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/pojo/DatabaseInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/pojo/School_Management.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/pojo/School_Management.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/pojo/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOPPROJECT/exam/pojo/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam/LessonInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam/LessonInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam/SchoolManagementMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam/SchoolManagementMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam/pojo/CoursesInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam/pojo/CoursesInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam/LessonInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam/pojo/DatabaseInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam/pojo/DatabaseInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exam/pojo/School_Management.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam/pojo/School_Management.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exam/pojo/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam/pojo/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam/pojo/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +106,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -235,30 +224,30 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="184" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1611659941601" />
-    <state width="1398" height="2" key="GridCell.Tab.0.bottom" timestamp="1611664242709">
+    <state width="1398" height="2" key="GridCell.Tab.0.bottom" timestamp="1611665312340">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="2" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1611664242709" />
-    <state width="1398" height="2" key="GridCell.Tab.0.center" timestamp="1611664242694">
+    <state width="1398" height="2" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1611665312340" />
+    <state width="1398" height="2" key="GridCell.Tab.0.center" timestamp="1611665312337">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="2" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1611664242694" />
-    <state width="1398" height="2" key="GridCell.Tab.0.left" timestamp="1611664242674">
+    <state width="1398" height="2" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1611665312337" />
+    <state width="1398" height="2" key="GridCell.Tab.0.left" timestamp="1611665312336">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="2" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1611664242674" />
-    <state width="1398" height="2" key="GridCell.Tab.0.right" timestamp="1611664242699">
+    <state width="1398" height="2" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1611665312336" />
+    <state width="1398" height="2" key="GridCell.Tab.0.right" timestamp="1611665312338">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="2" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1611664242699" />
-    <state x="208" y="33" key="SettingsEditor" timestamp="1611659968580">
+    <state width="1398" height="2" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1611665312338" />
+    <state x="208" y="33" key="SettingsEditor" timestamp="1611665308544">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="208" y="33" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1611659968580" />
-    <state x="671" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1611660480932">
+    <state x="208" y="33" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1611665308544" />
+    <state x="671" y="266" key="com.intellij.ide.util.TipDialog" timestamp="1611680099040">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="671" y="266" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1611660480932" />
+    <state x="671" y="266" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1611680099040" />
     <state x="671" y="262" key="com.intellij.ide.util.TipDialog/0.23.1440.810@0.23.1440.810" timestamp="1611660433177" />
     <state x="482" y="76" key="refactoring.ChangeSignatureDialog" timestamp="1611663779255">
       <screen x="0" y="0" width="1440" height="900" />
