@@ -1,26 +1,9 @@
 package exam.pojo;
 
-public class DataAnswerKey {
+public class DataAnswerKey extends AnswerKey {
 
-		
-		private String datastylish;
-		private String dataanswer;
-		
-		public String getDatastylish() {
-			return datastylish;
-		}
-		
-		public void setDatastylish(String calstylish) {
-			this.datastylish=calstylish;
-		}
-		
-		public String  getDataanswer() {
-			return dataanswer;
-		}
-		
-		public void setDataanswer(String calanswer) {
-			this.dataanswer=calanswer;
-		}
-		
 
+	public DataAnswerKey(String calstylish, String calanswer) {
+		super(calstylish, calanswer);
+	}
 }
