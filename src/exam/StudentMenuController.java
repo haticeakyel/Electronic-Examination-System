@@ -7,15 +7,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
 
 import exam.pojo.CalculateInfo;
 import exam.pojo.DatabaseInfo;
 import exam.pojo.ExamProgram;
+import exam.pojo.ExamResult;
 import exam.pojo.ExaminationSystem;
 import exam.pojo.HistoryInfo;
 import exam.pojo.PhysicInfo;
+import exam.pojo.Student;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -28,13 +31,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+
+//template design pattern
 
 public class StudentMenuController implements Initializable {
 
@@ -82,90 +89,41 @@ public class StudentMenuController implements Initializable {
 		private TableColumn<ExamProgram, String> examClass;
 	 
 	 @FXML
-	    TableView tablecalculateinfo;
+	    private Button stdNumEnter;
 	 
 	 @FXML
-		private TableColumn<CalculateInfo, String> visaresultCal;
-	 
-	 @FXML
-		private TableColumn<CalculateInfo, String> visapercentCal;
-	 
-	 @FXML
-		private TableColumn<CalculateInfo, String> FinalresultCal;
-	 
-	 @FXML
-		private TableColumn<CalculateInfo, String> FinalpercentCal;
-	 
-	 @FXML
-		private TableColumn<CalculateInfo, String> TotalresultCal;
-	 
-	 @FXML
-		private TableColumn<CalculateInfo, String> DegreeCal;
-	 
-	 @FXML
-	    TableView tabledatabaseinfo;
-	 
-	 @FXML
-		private TableColumn<DatabaseInfo, String> visaresultData;
-		
-	 @FXML
-        private TableColumn<DatabaseInfo, String> visapercentData;
-		
-	 @FXML
-		private TableColumn<DatabaseInfo, String> FinalresultData;
-		
-	 @FXML
-		private TableColumn<DatabaseInfo, String> FinalpercentData;
-		
-	 @FXML
-		private TableColumn<DatabaseInfo, String> TotalresultData;		
-	 
-	 @FXML
-		private TableColumn<DatabaseInfo, String> DegreeData;
-		
-	 @FXML
-	    TableView tablephysicinfo;
-	 
-	 @FXML
-		private TableColumn<PhysicInfo, String> visaresultPhysic;
-	 
-	 @FXML
-		private TableColumn<PhysicInfo, String> visapercentPhysic;
-	 
-	 @FXML
-		private TableColumn<PhysicInfo, String> FinalresultPhysic;
-	 
-	 @FXML
-		private TableColumn<PhysicInfo, String> FinalpercentPhysic;
-	 
-	 @FXML
-		private TableColumn<PhysicInfo, String> TotalresultPhysic;
-	 
-	 @FXML
-		private TableColumn<PhysicInfo, String> DegreePhysic;
-	 
-	 @FXML
-	    TableView tablehistoryinfo;
-	 
-	 @FXML
-		private TableColumn<HistoryInfo, String> visaresultHist;
-	 
-	 @FXML
-		private TableColumn<HistoryInfo, String> visapercentHist;
-	 
-	 @FXML
-		private TableColumn<HistoryInfo, String> FinalresultHist;
-	 
-	 @FXML
-		private TableColumn<HistoryInfo, String> FinalpercentHist;
-	 
-	 @FXML
-		private TableColumn<HistoryInfo, String> TotalresultHist;
-	 
-	 @FXML
-		private TableColumn<HistoryInfo, String> DegreeHist;
+	    TableView tableResulteinfo;
 
+	 
+/* @FXML
+		private TableColumn<ExamResult, String> sclNumResult;
+	*/ 
+	 @FXML
+		private TableColumn<ExamResult, String> lessonResult;
 	
+	 @FXML
+		private TableColumn<ExamResult, String> visaresultResult;
+	 
+	 @FXML
+		private TableColumn<ExamResult, String> visapercentResult;
+	 
+	 @FXML
+		private TableColumn<ExamResult, String> FinalresultResult;
+	 
+	 @FXML
+		private TableColumn<ExamResult, String> FinalpercentResult;
+	 
+	 @FXML
+		private TableColumn<ExamResult, String> TotalresultResult;
+	 
+	 @FXML
+		private TableColumn<ExamResult, String> DegreeResult;
+	 
+	 @FXML
+		private TextField stdNumResult;
+ 
+	 
+	 
 		
 	 @FXML
 		public void examBtn(ActionEvent event) throws IOException {
@@ -195,9 +153,87 @@ public class StudentMenuController implements Initializable {
                  alert.show();
             }
 	 }
+	 
+	 
 	
-	 
-	 
+		
+			
+	        @FXML
+		    public void stdNumEnterBtn(ActionEvent evet) {
+	        	
+			Window owner = stdNumEnter.getScene().getWindow();
+			
+			try {
+
+				ArrayList<ExamResult> examResults = getAllExamResults();
+                
+		
+				ArrayList<ExamResult> examResults2= new ArrayList<ExamResult>();
+			 
+				for (int i = 0; i < examResults.size(); i++) {
+					String s1= examResults.get(i).getRsltstudentNumber()==null?"":examResults.get(i).getRsltstudentNumber();
+
+					String s2= stdNumResult.getText();
+					
+					if (s1.equals(s2)) { 
+						
+						examResults2.add(examResults.get(i));
+					}}
+
+				
+				
+				
+				lessonResult.setCellValueFactory(new PropertyValueFactory<>("rsltLesson"));
+				visaresultResult.setCellValueFactory(new PropertyValueFactory<>("rstlvisaResult"));
+				visapercentResult.setCellValueFactory(new PropertyValueFactory<>("rsltvisaPercent"));
+				FinalresultResult.setCellValueFactory(new PropertyValueFactory<>("rsltfinalResult"));
+				FinalpercentResult.setCellValueFactory(new PropertyValueFactory<>("rsltfinalPercent"));
+				TotalresultResult.setCellValueFactory(new PropertyValueFactory<>("rsltotalResult"));
+				DegreeResult.setCellValueFactory(new PropertyValueFactory<>("rsltDegree"));
+				
+				
+				tableResulteinfo.getItems().setAll(FXCollections.observableArrayList(examResults2));
+ 
+				} catch (Exception e) {
+
+				AlertHelperExam.showAlert(Alert.AlertType.ERROR, owner, "ExamResult",
+						"No student found.Try Again.");
+			}
+		}
+	        
+			
+	
+	
+	        
+	    	public ArrayList<ExamResult> getAllExamResults() {
+	    		try {
+	    			FileReader fileReader = new FileReader(new File("files/examResult"));
+	    			BufferedReader br = new BufferedReader(fileReader);
+	    			String line;
+	    			ArrayList<ExamResult> examResults = new ArrayList<ExamResult>();
+
+	    			while ((line = br.readLine()) != null && line.length() > 0) {
+	    				ExamResult examResult = new ExamResult();
+
+	    			    examResult.setRsltstudentNumber(line.split(":")[0]);
+						examResult.setRsltLesson(line.split(":")[1]);
+						examResult.setRstlvisaResult(line.split(":")[2]);
+						examResult.setRsltvisaPercent(line.split(":")[3]);
+						examResult.setRsltfinalResult(line.split(":")[4]);
+						examResult.setRsltfinalPercent(line.split(":")[5]);
+						examResult.setRsltotalResult(line.split(":")[6]);
+						examResult.setRsltDegree(line.split(":")[7]);
+						examResults.add(examResult);
+	    			}
+	    			fileReader.close();
+	    			return examResults;
+	    		} catch (Exception e) {
+	    			return null;
+	    		}
+	    	}
+	    	
+	       
+
 		private ArrayList<ExaminationSystem> getAllExams() {
 			try {
 				FileReader fileReader = new FileReader(new File("files/examinationSystem"));
@@ -245,105 +281,6 @@ public class StudentMenuController implements Initializable {
 			}
 		}
 		
-		private List<CalculateInfo> getAllCalculates() {
-			try {
-				FileReader fileReader = new FileReader(new File("files/calculateInfo"));
-				BufferedReader br = new BufferedReader(fileReader);
-				String line;
-				List<CalculateInfo> calculates = new ArrayList<>();
-				
-				while ((line = br.readLine()) != null ) {
-					CalculateInfo calculateInfo = new CalculateInfo();
-					calculateInfo.setCalVisaResult(line.split(":")[2]);
-					calculateInfo.setCalVisaPercent(line.split(":")[3]);
-					calculateInfo.setCalFinalResult(line.split(":")[4]);
-					calculateInfo.setCalFinalPercent(line.split(":")[5]);
-					calculateInfo.setCalTotalResult(line.split(":")[6]);
-					calculateInfo.setCalDegree(line.split(":")[7]);
-					calculates.add(calculateInfo);
-				}
-				fileReader.close();
-				return calculates;
-				} catch (Exception e) {
-				return new ArrayList<>();
-			}
-		}
-	 
-		private List<DatabaseInfo> getAllDatabases() {
-			try {
-				FileReader fileReader = new FileReader(new File("files/databaseInfo"));
-				BufferedReader br = new BufferedReader(fileReader);
-				String line;
-				List<DatabaseInfo> databases = new ArrayList<>();
-				
-				while ((line = br.readLine()) != null ) {
-					DatabaseInfo databaseInfo = new DatabaseInfo();
-					databaseInfo.setDataVisaResult(line.split(":")[2]);
-					databaseInfo.setDataVisaPercent(line.split(":")[3]);
-					databaseInfo.setDataFinalResult(line.split(":")[4]);
-					databaseInfo.setDataFinalPercent(line.split(":")[5]);
-					databaseInfo.setDataTotalResult(line.split(":")[6]);
-					databaseInfo.setDataDegree(line.split(":")[7]);
-					databases.add(databaseInfo);
-				}
-				fileReader.close();
-				return databases;
-				} catch (Exception e) {
-				return new ArrayList<>();
-			}
-		}
-		
-		private List<PhysicInfo> getAllPhysics() {
-			try {
-				FileReader fileReader = new FileReader(new File("files/physicInfo"));
-				BufferedReader br = new BufferedReader(fileReader);
-				String line;
-				List<PhysicInfo> physics = new ArrayList<>();
-				
-				while ((line = br.readLine()) != null ) {
-					PhysicInfo physicInfo = new PhysicInfo();
-					physicInfo.setPhysicVisaResult(line.split(":")[2]);
-					physicInfo.setPhysicVisaPercent(line.split(":")[3]);
-					physicInfo.setPhysicFinalResult(line.split(":")[4]);
-					physicInfo.setPhysicFinalPercent(line.split(":")[5]);
-					physicInfo.setPhysicTotalResult(line.split(":")[6]);
-					physicInfo.setPhysicDegree(line.split(":")[7]);
-					physics.add(physicInfo);
-				}
-				fileReader.close();
-				return physics;
-				} catch (Exception e) {
-				return new ArrayList<>();
-			}
-		}
-		
-	    private List<HistoryInfo> getAllHistories() {
-	    	try {
-				FileReader fileReader = new FileReader(new File("files/historyInfo"));
-				BufferedReader br = new BufferedReader(fileReader);
-				String line;
-				List<HistoryInfo> histories = new ArrayList<>();
-			
-				while ((line = br.readLine()) != null ) {
-					HistoryInfo historyInfo = new HistoryInfo();
-					historyInfo.setHistoryVisaResult(line.split(":")[2]);
-					historyInfo.setHistoryVisaPercent(line.split(":")[3]);
-					historyInfo.setHistoryFinalResult(line.split(":")[4]);
-					historyInfo.setHistoryFinalPercent(line.split(":")[5]);
-					historyInfo.setHistoryTotalResult(line.split(":")[6]);
-					historyInfo.setHistoryDegree(line.split(":")[7]);
-					histories.add(historyInfo);
-				}
-				fileReader.close();
-				return histories;
-				} catch (Exception e) {
-				return new ArrayList<>();
-			}
-		}
-		
- 
-	 
-		
  
 	    public void initialize(URL location, ResourceBundle resources) {
 
@@ -359,7 +296,8 @@ public class StudentMenuController implements Initializable {
 
  
 	         studentSelectTabPane.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Tab>() {
-	            @Override
+	          //template design pattern
+	        	 @Override
 	            public void changed(ObservableValue<? extends Tab> ov, Tab tabOld, Tab tabNew) {
 
 	                if (tabNew.getText().equals("Electronic Examination System")) {
@@ -393,41 +331,10 @@ public class StudentMenuController implements Initializable {
 	                
 	                else if (tabNew.getText().equals("My Exam Result")){
 	                	
-	                	 List<CalculateInfo> calculates = getAllCalculates();
-	                	 visaresultCal.setCellValueFactory(new PropertyValueFactory<>("calVisaResult"));
-	                	 visapercentCal.setCellValueFactory(new PropertyValueFactory<>("calVisaPercent"));
-	                	 FinalresultCal.setCellValueFactory(new PropertyValueFactory<>("calFinalResult"));
-	                	 FinalpercentCal.setCellValueFactory(new PropertyValueFactory<>("calFinalPercent"));
-	                	 TotalresultCal.setCellValueFactory(new PropertyValueFactory<>("calTotalResult"));
-	                	 DegreeCal.setCellValueFactory(new PropertyValueFactory<>("calDegree"));
-	                	 tablecalculateinfo.getItems().setAll(FXCollections.observableArrayList(calculates));
+	                	Window owner = stdNumEnter.getScene().getWindow();
+	              
 	                	
-	                	  List<DatabaseInfo> databases = getAllDatabases();
-	                	  visaresultData.setCellValueFactory(new PropertyValueFactory<>("dataVisaResult"));
-	                	  visapercentData.setCellValueFactory(new PropertyValueFactory<>("dataVisaPercent"));
-	                	  FinalresultData.setCellValueFactory(new PropertyValueFactory<>("dataFinalResult"));
-	                	  FinalpercentData.setCellValueFactory(new PropertyValueFactory<>("dataFinalPercent"));
-	                	  TotalresultData.setCellValueFactory(new PropertyValueFactory<>("dataTotalResult"));
-	                	  DegreeData.setCellValueFactory(new PropertyValueFactory<>("dataDegree"));
-	                	  tabledatabaseinfo.getItems().setAll(FXCollections.observableArrayList(databases));
-	                	  
-	                	  List<PhysicInfo> physics = getAllPhysics();
-	                	  visaresultPhysic.setCellValueFactory(new PropertyValueFactory<>("physicVisaResult"));
-	                	  visapercentPhysic.setCellValueFactory(new PropertyValueFactory<>("physicVisaPercent"));
-	                	  FinalresultPhysic.setCellValueFactory(new PropertyValueFactory<>("physicFinalResult"));
-	                	  FinalpercentPhysic.setCellValueFactory(new PropertyValueFactory<>("physicFinalPercent"));
-	                	  TotalresultPhysic.setCellValueFactory(new PropertyValueFactory<>("physicTotalResult"));
-	                	  DegreePhysic.setCellValueFactory(new PropertyValueFactory<>("physicDegree"));
-	                	  tablephysicinfo.getItems().setAll(FXCollections.observableArrayList(physics));
-	                	  
-	                	  List<HistoryInfo> histories = getAllHistories();
-	                	  visaresultHist.setCellValueFactory(new PropertyValueFactory<>("historyVisaResult"));
-	                	  visapercentHist.setCellValueFactory(new PropertyValueFactory<>("historyVisaPercent"));
-	                	  FinalresultHist.setCellValueFactory(new PropertyValueFactory<>("historyFinalResult"));
-	                	  FinalpercentHist.setCellValueFactory(new PropertyValueFactory<>("historyFinalPercent"));
-	                	  TotalresultHist.setCellValueFactory(new PropertyValueFactory<>("historyTotalResult"));
-	                	  DegreeHist.setCellValueFactory(new PropertyValueFactory<>("historyDegree"));
-	                	  tablehistoryinfo.getItems().setAll(FXCollections.observableArrayList(histories));
+	                	
 	                	
 	                }
 

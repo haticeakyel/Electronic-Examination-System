@@ -1,5 +1,5 @@
 package exam;
-
+//factory pattern design
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -179,6 +179,8 @@ public class ExamEntryController extends BaseController  {
 	public int questionorder=0;
 	public String selectExam="";
 	public ArrayList<String> questions= new ArrayList<String>();
+	public ArrayList<String> info= new ArrayList<String>();
+	
 	
 	public void initialize(URL location, ResourceBundle resources) {
 		 
@@ -190,7 +192,7 @@ public class ExamEntryController extends BaseController  {
 	         BufferedReader br = new BufferedReader(fileReader);
 	         
 				selectExam= br.readLine().trim();
-				System.out.println("secilensinav "+ selectExam);
+				System.out.println("selectExam "+ selectExam);
 			 
 		 
 		} catch (FileNotFoundException e) {
@@ -201,6 +203,7 @@ public class ExamEntryController extends BaseController  {
 			e.printStackTrace();
 		}
 		
+		//info = ReadContent("files/"+selectExam+"/examinfo");
 		
 		try {
 			fileReader = new FileReader(new File("files/"+selectExam+"/examinfo"));
@@ -226,30 +229,10 @@ public class ExamEntryController extends BaseController  {
 			e.printStackTrace();
 		} 
 		
+		//factory pattern design
 		questions = ReadContent("files/"+selectExam+"/examquestios");
 		
-		/*try {
-			 questions= new ArrayList<String>();
-			fileReader = new FileReader(new File("files/"+selectExam+"/examquestios"));
-            
-			String info="";
-			String val="";
-	        BufferedReader br2 = new BufferedReader(fileReader);
-	        
-				while ((val = br2.readLine()) != null) {
-					
-				   questions.add(val);
-				}
-				
-				fileReader.close();  
 		
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} */
 		
 	
 		

@@ -3,7 +3,7 @@ package exam;
 import javafx.scene.control.Alert;
 import javafx.stage.Window;
 
-//singleton desing pattern
+//singleton design pattern
 public class AlertHelperExam {
 
     public static void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {

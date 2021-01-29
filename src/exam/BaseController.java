@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.Initializable;
 
-//factory desing pattern
+//factory design pattern
 
 public abstract  class BaseController implements Initializable  {
 
@@ -39,9 +39,13 @@ public abstract  class BaseController implements Initializable  {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
-		
-		return content;
-	}
+		}
+		return content; 
+	
 
-}
+
+	}}
+
+
+
+

@@ -1,1 +1,5 @@
-Bu sinavdan kaç bekliyorsunuz?:10:5:55:90:0
+Q1) Which of the following is not a data manipulation statement?:Select:Update:Insert:Deny:Delete
+Q2)In the company you work for, a backup of the data is requested in the database system every night at 2:00.For such a system, you need to create a scheduled task in SQL Server.Which service should be used to create these and similar scheduled tasks on MSSQL Server?:SSIS(SQL Server Integration Services): FullText Search:Maintenance Plans:Reporting Services:Analysis Services
+Q3) Which of the following queries is wrong?:Select Name, Surname, Age from Customers.:Select NameSoyad as Name, Age from Customers.:Select Name + '‘+ Surname as Name, Age as from Customers.:Select Name + '‘+ Surname, Age as Name from Customers.:Select Name + Surname + Age from Customers.
+Q4) How can you change an existing table?:Drop Table TableName Create TableTableName (...):Alter Table TableName (…):Drop Table TableName.:Create Table TableName.:Create Table TableName Alter Table TableName (...)
+Q5) What privilege a user should be given to list only the records in the database?:db_datawriter:db_datareader:db_denydatawriter:db_denydatareader:None

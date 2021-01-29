@@ -1,5 +1,6 @@
 package exam.pojo;
 
+//flyweight pattern
 public class User {
     private String username;
     private String password;

@@ -219,7 +219,7 @@
                         </TableView>
                         <Label layoutX="440.0" layoutY="88.0" text="Course Code" />
                         <TextField fx:id="courseInfoSerch" layoutX="535.0" layoutY="84.0" />
-                        <Button fx:id="courseInfoSerchBtn" layoutX="716.0" layoutY="84.0" mnemonicParsing="false" onAction="#courseInfoSerch" text="Enter" />
+                        <Button fx:id="courseInfoSerchBtn" layoutX="754.0" layoutY="84.0" mnemonicParsing="false" onAction="#courseInfoSerch" text="Enter" />
                      </children>
                   </AnchorPane>
               </content>

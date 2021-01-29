@@ -2,6 +2,7 @@ package exam.pojo;
 
 
 public class CalculateInfo  {
+	    
 	
 	    private String calStudentName;
 	    private String calSchoolNumber;

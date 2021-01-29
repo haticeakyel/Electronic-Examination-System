@@ -1,5 +1,5 @@
 package exam;
-
+//state design pattern
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.EventObject;
 import java.util.List;
 
-public class SchoolManagementLoginController {
+public class SchoolManagementLoginController extends BaseLoginController {
 
 	 private static final String Parent = null;
 
@@ -53,7 +53,9 @@ public class SchoolManagementLoginController {
        stage.setScene(scene);
        stage.show(); 
    }
-   
+
+
+   @Override
    @FXML
    public void login(ActionEvent actionEvent) throws IOException {
        Window owner = submitButton.getScene().getWindow();
@@ -110,6 +112,7 @@ public class SchoolManagementLoginController {
        }
        
    }
+
                      
          
           

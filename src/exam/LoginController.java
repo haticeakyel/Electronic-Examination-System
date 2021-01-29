@@ -25,7 +25,10 @@ import java.util.ArrayList;
 import java.util.EventObject;
 import java.util.List;
 
-public class LoginController implements IFxml{
+//facade design pattern
+//template design pattern
+//state design pattern
+public class LoginController extends BaseLoginController implements IFxml{
 
 	 private static final String Parent = null;
 
@@ -47,21 +50,21 @@ public class LoginController implements IFxml{
 	private EventObject actionEvent;
 
 	private EventObject event;
-
-
-
-
-
-    @FXML
+	
+	
+	
+	  @FXML
 		public void exitStudentLoginBtn(ActionEvent event) throws IOException {
-        Parent mainexamParent = FXMLLoader.load(getClass().getResource("mainexam.fxml"));
-        Scene scene = new Scene(mainexamParent);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-
-    }
-    
+	    
+	  	   Parent mainexamParent = FXMLLoader.load(getClass().getResource("mainexam.fxml"));
+	       Scene scene = new Scene(mainexamParent);
+	       Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+	       stage.setScene(scene);
+	       stage.show(); 
+	    	
+	    }
+	  
+	   @Override
     @FXML
     public void login(ActionEvent actionEvent) throws IOException {
         Window owner = submitButton.getScene().getWindow();
@@ -116,24 +119,25 @@ public class LoginController implements IFxml{
         }
         
     }
+
+	
+                      
     @Override
-    public void stageShow() {
-        Parent mainexamParent = null;
-        try {
-            mainexamParent = FXMLLoader.load(getClass().getResource("mainexam.fxml"));
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+	public void stageShow() {
+		Parent mainexamParent = null;
+		try {
+			mainexamParent = FXMLLoader.load(getClass().getResource("mainexam.fxml"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         Scene scene = new Scene(mainexamParent);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
-        stage.show();
-
-    }
-
-
-
-
-
+        stage.show(); 
+		
+	}
+           
+                
+          
     }

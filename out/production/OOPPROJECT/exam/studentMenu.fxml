@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
@@ -56,51 +57,21 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="934.0" prefWidth="824.0">
                      <children>
-                        <Label layoutX="40.0" layoutY="41.0" text="Calculate" />
-                        <TableView fx:id="tablecalculateinfo" layoutX="135.0" layoutY="41.0" prefHeight="90.0" prefWidth="772.0">
+                        <TableView fx:id="tableResulteinfo" layoutX="14.0" layoutY="152.0" prefHeight="435.0" prefWidth="931.0">
                            <columns>
-                              <TableColumn fx:id="visaresultCal" prefWidth="133.0" text="Visa Result" />
-                              <TableColumn fx:id="visapercentCal" prefWidth="127.0" text="Visa Percent" />
-                              <TableColumn fx:id="FinalresultCal" prefWidth="134.0" text="Final Result" />
-                              <TableColumn fx:id="FinalpercentCal" prefWidth="128.0" text="Final Percent" />
-                              <TableColumn fx:id="TotalresultCal" prefWidth="110.0" text="Total Result" />
-                              <TableColumn fx:id="DegreeCal" prefWidth="137.5999755859375" text="Degree" />
+                              <TableColumn fx:id="lessonResult" prefWidth="111.19996643066406" text="Lesson" />
+                              <TableColumn fx:id="visaresultResult" prefWidth="147.2000274658203" text="Visa Result" />
+                              <TableColumn fx:id="visapercentResult" prefWidth="112.79998779296875" text="Visa Percent" />
+                              <TableColumn fx:id="FinalresultResult" prefWidth="158.4000244140625" text="Final Result" />
+                              <TableColumn fx:id="FinalpercentResult" prefWidth="131.199951171875" text="Final Percent" />
+                              <TableColumn fx:id="TotalresultResult" prefWidth="149.5999755859375" text="Total Result" />
+                              <TableColumn fx:id="DegreeResult" prefWidth="122.4000244140625" text="Degree" />
                            </columns>
                         </TableView>
-                        <Label layoutX="40.0" layoutY="181.0" text="Database" />
-                        <TableView fx:id="tabledatabaseinfo" layoutX="133.0" layoutY="181.0" prefHeight="90.0" prefWidth="774.0">
-                          <columns>
-                            <TableColumn fx:id="visaresultData" prefWidth="132.0" text="Visa Result" />
-                            <TableColumn fx:id="visapercentData" prefWidth="126.0" text="Visa Percent" />
-                              <TableColumn fx:id="FinalresultData" prefWidth="137.0" text="Final Result" />
-                              <TableColumn fx:id="FinalpercentData" prefWidth="124.0" text="Final Percent" />
-                              <TableColumn fx:id="TotalresultData" prefWidth="114.0" text="Total Result" />
-                              <TableColumn fx:id="DegreeData" prefWidth="139.20004882812498" text="Degree" />
-                          </columns>
-                        </TableView>
-                        <TableView fx:id="tablephysicinfo" layoutX="133.0" layoutY="306.0" prefHeight="90.0" prefWidth="773.0">
-                          <columns>
-                            <TableColumn fx:id="visaresultPhysic" prefWidth="142.0" text="Visa Result" />
-                            <TableColumn fx:id="visapercentPhysic" prefWidth="116.0" text="Visa Percent" />
-                              <TableColumn fx:id="FinalresultPhysic" prefWidth="137.0" text="Final Result" />
-                              <TableColumn fx:id="FinalpercentPhysic" prefWidth="124.0" text="Final Percent" />
-                              <TableColumn fx:id="TotalresultPhysic" prefWidth="117.0" text="Total Result" />
-                              <TableColumn fx:id="DegreePhysic" prefWidth="135.19997558593752" text="Degree" />
-                          </columns>
-                        </TableView>
                         <Label layoutX="14.0" layoutY="724.0" />
-                        <TableView fx:id="tablehistoryinfo" layoutX="133.0" layoutY="437.0" prefHeight="96.0" prefWidth="774.0">
-                          <columns>
-                            <TableColumn fx:id="visaresultHist" prefWidth="143.0" text="Visa Result" />
-                            <TableColumn fx:id="visapercentHist" prefWidth="117.0" text="Visa Percent" />
-                              <TableColumn fx:id="FinalresultHist" prefWidth="137.0" text="Final Result" />
-                              <TableColumn fx:id="FinalpercentHist" prefWidth="125.0" text="Final Percent" />
-                              <TableColumn fx:id="TotalresultHist" prefWidth="113.0" text="Total Result" />
-                              <TableColumn fx:id="DegreeHist" prefWidth="135.99997558593748" text="Degree" />
-                          </columns>
-                        </TableView>
-                        <Label layoutX="48.0" layoutY="306.0" text="Physic" />
-                        <Label layoutX="46.0" layoutY="437.0" text="History" />
+                        <Label layoutX="14.0" layoutY="72.0" text="School Number" />
+                        <Button fx:id="stdNumEnter" layoutX="369.0" layoutY="68.0" mnemonicParsing="false" onAction="#stdNumEnterBtn" text="Enter" />
+                        <TextField fx:id="stdNumResult" layoutX="145.0" layoutY="68.0" />
                      </children>
                   </AnchorPane>
               </content>

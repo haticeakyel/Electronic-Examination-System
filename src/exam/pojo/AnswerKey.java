@@ -1,5 +1,5 @@
 package exam.pojo;
-
+//proxy pattern 
 public abstract class AnswerKey {
     private String calstylish;
     private String calanswer;
